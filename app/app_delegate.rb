@@ -4,6 +4,7 @@ class AppDelegate
 
   COLORS = [UIColor.clearColor, UIColor.redColor, UIColor.blueColor, UIColor.greenColor, UIColor.yellowColor, UIColor.orangeColor]
   FONTS = [UIFont.systemFontOfSize(30), UIFont.systemFontOfSize(40), UIFont.systemFontOfSize(50), UIFont.systemFontOfSize(60)]
+  LIGATURES = [:off, :on]
 
   def random_color
     COLORS.shuffle.first
@@ -11,6 +12,10 @@ class AppDelegate
 
   def random_font
     FONTS.shuffle.first
+  end
+
+  def random_ligature
+    LIGATURES.shuffle.first
   end
 
   def application(application, didFinishLaunchingWithOptions:launchOptions)
@@ -24,7 +29,7 @@ class AppDelegate
 
     big_font = UIFont.systemFontOfSize(60)
 
-    mastr = MotionMastr::Builder.new
+    mastr = MotionMastr::Builder.new ligature: random_ligature
     "Hello World".each_char do |c|
       mastr.add c,
         font: random_font,

@@ -12,6 +12,7 @@ module MotionMastr
       stroke_color_attribute:        NSStrokeColorAttributeName,
       strikethrough_color_attribute: NSStrikethroughColorAttributeName,
       underline_color_attribute:     NSUnderlineColorAttributeName,
+      ligature_attribute:            NSLigatureAttributeName,
     }
 
     def initialize(default_styles={})
