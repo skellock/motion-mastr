@@ -6,8 +6,12 @@ module MotionMastr
     attr_reader :default_styles, :pieces
 
     ATTRIBUTES = {
-      font_attribute:             NSFontAttributeName,
-      foreground_color_attribute: NSForegroundColorAttributeName,
+      font_attribute:                NSFontAttributeName,
+      foreground_color_attribute:    NSForegroundColorAttributeName,
+      background_color_attribute:    NSBackgroundColorAttributeName,
+      stroke_color_attribute:        NSStrokeColorAttributeName,
+      strikethrough_color_attribute: NSStrikethroughColorAttributeName,
+      underline_color_attribute:     NSUnderlineColorAttributeName,
     }
 
     def initialize(default_styles={})

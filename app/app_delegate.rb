@@ -2,6 +2,17 @@ class AppDelegate
 
   attr_reader :label
 
+  COLORS = [UIColor.clearColor, UIColor.redColor, UIColor.blueColor, UIColor.greenColor, UIColor.yellowColor, UIColor.orangeColor]
+  FONTS = [UIFont.systemFontOfSize(30), UIFont.systemFontOfSize(40), UIFont.systemFontOfSize(50), UIFont.systemFontOfSize(60)]
+
+  def random_color
+    COLORS.shuffle.first
+  end
+
+  def random_font
+    FONTS.shuffle.first
+  end
+
   def application(application, didFinishLaunchingWithOptions:launchOptions)
     rootViewController = UIViewController.alloc.init
     rootViewController.title = 'motion-mastr'
@@ -13,13 +24,16 @@ class AppDelegate
 
     big_font = UIFont.systemFontOfSize(60)
 
-    mastr = "Hello ".mastr
-      .add("W", font: big_font, foreground_color: UIColor.redColor)
-      .add("o", font: big_font, foreground_color: UIColor.blueColor)
-      .add("r", font: big_font, foreground_color: UIColor.greenColor)
-      .add("l", font: big_font, foreground_color: UIColor.yellowColor)
-      .add("d", font: big_font, foreground_color: UIColor.orangeColor)
-
+    mastr = MotionMastr::Builder.new
+    "Hello World".each_char do |c|
+      mastr.add c,
+        font: random_font,
+        foreground_color: random_color,
+        background_color: random_color,
+        stroke_color: random_color,
+        underline_color: random_color,
+        strikethrough_color: random_color
+    end
 
     label.attributedText = mastr.build
 
