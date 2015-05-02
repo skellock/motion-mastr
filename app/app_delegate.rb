@@ -30,6 +30,10 @@ class AppDelegate
     [0, 2.0, 4.0].shuffle.first
   end
 
+  def random_stroke_width
+    [-4, -1, :default, 0, 0, 0, 1, 4].shuffle.first
+  end
+
   def random_message
     [
       "Honk if you love NSMutableAttributeStrings!",
@@ -48,6 +52,7 @@ class AppDelegate
       kern: random_kern,
       alignment: random_alignment,
       line_spacing: random_line_spacing,
+      stroke_width: random_stroke_width,
     }
 
     mastr = MotionMastr::Builder.new defaults
