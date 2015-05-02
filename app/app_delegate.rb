@@ -22,6 +22,14 @@ class AppDelegate
     [:default, 1.0, 2.0, 3.0].shuffle.first
   end
 
+  def random_alignment
+    [:left, :center, :right].shuffle.first
+  end
+
+  def random_line_spacing
+    [0, 2.0, 4.0].shuffle.first
+  end
+
   def random_message
     [
       "Honk if you love NSMutableAttributeStrings!",
@@ -29,11 +37,20 @@ class AppDelegate
       "My other string is unicode",
       "No clowning around.",
       "motion-mastr in the house",
+      "Long ago in a galaxy far far away...",
     ].shuffle.first
   end
 
   def random_mastr
-    mastr = MotionMastr::Builder.new ligature: random_ligature, kern: random_kern
+
+    defaults = {
+      ligature: random_ligature,
+      kern: random_kern,
+      alignment: random_alignment,
+      line_spacing: random_line_spacing,
+    }
+
+    mastr = MotionMastr::Builder.new defaults
     random_message.each_char do |c|
       mastr.add c,
         font: random_font,
@@ -64,7 +81,7 @@ class AppDelegate
     @window.rootViewController = navigationController
     @window.makeKeyAndVisible
 
-    @timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target:self, selector:'party', userInfo:nil, repeats:true)
+    @timer = NSTimer.scheduledTimerWithTimeInterval(0.25, target:self, selector:'party', userInfo:nil, repeats:true)
 
 
     true
