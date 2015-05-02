@@ -101,7 +101,7 @@ class AppDelegate
     @window.rootViewController = navigationController
     @window.makeKeyAndVisible
 
-    @timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target:self, selector:'party', userInfo:nil, repeats:true)
+    @timer = NSTimer.scheduledTimerWithTimeInterval(0.25, target:self, selector:'party', userInfo:nil, repeats:true)
 
 
     true
