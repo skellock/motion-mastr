@@ -42,6 +42,7 @@ class AppDelegate
       "No clowning around.",
       "motion-mastr in the house",
       "Long ago in a galaxy far far away...",
+      "Roses are red. Violets are blue. NSMutableAttributeString are fun. And poetry ain't.",
     ].shuffle.first
   end
 
