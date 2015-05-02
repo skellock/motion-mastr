@@ -24,6 +24,7 @@ module MotionMastr
       link_attribute:                NSLinkAttributeName,
       baseline_offset_attribute:     NSBaselineOffsetAttributeName,
       obliqueness_attribute:         NSObliquenessAttributeName,
+      expansion_attribute:           NSExpansionAttributeName,
     }
 
     def initialize(default_styles={})
