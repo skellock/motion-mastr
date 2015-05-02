@@ -38,6 +38,10 @@ class AppDelegate
     [:letterpress, nil, nil, nil].shuffle.first
   end
 
+  def random_baseline_offset
+    [-5, -2, 0, 0, 0, 0, 0, 0, 2, 5].shuffle.first
+  end
+
   def random_shadow
     s = NSShadow.alloc.init
     s.shadowColor = [UIColor.blackColor, UIColor.redColor].shuffle.first
@@ -79,6 +83,7 @@ class AppDelegate
         stroke_color: random_background_color,
         underline_color: random_background_color,
         strikethrough_color: random_background_color,
+        baseline_offset: random_baseline_offset,
     end
     mastr
   end

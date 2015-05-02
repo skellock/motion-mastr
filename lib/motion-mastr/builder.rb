@@ -22,6 +22,7 @@ module MotionMastr
       text_effect_attribute:         NSTextEffectAttributeName,
       attachment_attribute:          NSAttachmentAttributeName,
       link_attribute:                NSLinkAttributeName,
+      baseline_offset_attribute:     NSBaselineOffsetAttributeName,
     }
 
     def initialize(default_styles={})
