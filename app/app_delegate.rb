@@ -10,7 +10,18 @@ class AppDelegate
     @label = UILabel.alloc.init
     label.frame = [[50, 100], [rootViewController.view.bounds.size.width, 300]]
     label.textColor = UIColor.blackColor
-    label.attributedText = "Hello ".mastr.add("world", font: UIFont.systemFontOfSize(60)).build
+
+    big_font = UIFont.systemFontOfSize(60)
+
+    mastr = "Hello ".mastr
+      .add("W", font: big_font, foreground_color: UIColor.redColor)
+      .add("o", font: big_font, foreground_color: UIColor.blueColor)
+      .add("r", font: big_font, foreground_color: UIColor.greenColor)
+      .add("l", font: big_font, foreground_color: UIColor.yellowColor)
+      .add("d", font: big_font, foreground_color: UIColor.orangeColor)
+
+
+    label.attributedText = mastr.build
 
     rootViewController.view.addSubview label
 

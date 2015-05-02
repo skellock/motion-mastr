@@ -5,9 +5,9 @@ module MotionMastr
 
     attr_reader :default_styles, :pieces
 
-    # TODO: figure out how to get a list of methods in a module
     ATTRIBUTES = {
-      font_attribute: NSFontAttributeName
+      font_attribute:             NSFontAttributeName,
+      foreground_color_attribute: NSForegroundColorAttributeName,
     }
 
     def initialize(default_styles={})
