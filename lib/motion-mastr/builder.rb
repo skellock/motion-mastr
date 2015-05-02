@@ -18,6 +18,7 @@ module MotionMastr
       strikethrough_style_attribute: NSStrikethroughStyleAttributeName,
       underline_style_attribute:     NSUnderlineStyleAttributeName,
       stroke_width_attribute:        NSStrokeWidthAttributeName,
+      shadow_attribute:              NSShadowAttributeName,
     }
 
     def initialize(default_styles={})

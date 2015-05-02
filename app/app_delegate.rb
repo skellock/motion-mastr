@@ -3,11 +3,11 @@ class AppDelegate
   attr_reader :label
 
   def random_background_color
-    [UIColor.clearColor, UIColor.purpleColor, UIColor.blueColor, UIColor.redColor, UIColor.darkGrayColor, UIColor.blackColor].shuffle.first
+    [nil, nil, nil, UIColor.clearColor, UIColor.clearColor, UIColor.clearColor, UIColor.clearColor, UIColor.purpleColor, UIColor.blueColor, UIColor.redColor, UIColor.darkGrayColor, UIColor.blackColor].shuffle.first
   end
 
   def random_foreground_color
-    [UIColor.clearColor, UIColor.whiteColor, UIColor.yellowColor, UIColor.orangeColor, UIColor.cyanColor, UIColor.greenColor].shuffle.first
+    [UIColor.yellowColor, UIColor.orangeColor, UIColor.cyanColor, UIColor.greenColor].shuffle.first
   end
 
   def random_font
@@ -34,6 +34,14 @@ class AppDelegate
     [-4, -1, :default, 0, 0, 0, 1, 4].shuffle.first
   end
 
+  def random_shadow
+    s = NSShadow.alloc.init
+    s.shadowColor = random_background_color
+    s.shadowOffset = [[0, 0], [4,4], [8,8], [12,12]].shuffle.first
+    s.shadowBlurRadius = [0.0, 1.0, 2.0, 4.0, 8.0].shuffle.first
+    s
+  end
+
   def random_message
     [
       "Honk if you love NSMutableAttributeStrings!",
@@ -54,6 +62,7 @@ class AppDelegate
       alignment: random_alignment,
       line_spacing: random_line_spacing,
       stroke_width: random_stroke_width,
+      shadow: random_shadow,
     }
 
     mastr = MotionMastr::Builder.new defaults
@@ -87,7 +96,7 @@ class AppDelegate
     @window.rootViewController = navigationController
     @window.makeKeyAndVisible
 
-    @timer = NSTimer.scheduledTimerWithTimeInterval(0.25, target:self, selector:'party', userInfo:nil, repeats:true)
+    @timer = NSTimer.scheduledTimerWithTimeInterval(1, target:self, selector:'party', userInfo:nil, repeats:true)
 
 
     true
