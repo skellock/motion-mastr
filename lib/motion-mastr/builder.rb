@@ -15,6 +15,8 @@ module MotionMastr
       ligature_attribute:            NSLigatureAttributeName,
       kern_attribute:                NSKernAttributeName,
       paragraph_style_attribute:     NSParagraphStyleAttributeName,
+      strikethrough_style_attribute: NSStrikethroughStyleAttributeName,
+      underline_style_attribute:     NSUnderlineStyleAttributeName,
     }
 
     def initialize(default_styles={})
