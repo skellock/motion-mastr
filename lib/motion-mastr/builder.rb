@@ -23,6 +23,7 @@ module MotionMastr
       attachment_attribute:          NSAttachmentAttributeName,
       link_attribute:                NSLinkAttributeName,
       baseline_offset_attribute:     NSBaselineOffsetAttributeName,
+      obliqueness_attribute:         NSObliquenessAttributeName,
     }
 
     def initialize(default_styles={})

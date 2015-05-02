@@ -42,6 +42,10 @@ class AppDelegate
     [-5, -2, 0, 0, 0, 0, 0, 0, 2, 5].shuffle.first
   end
 
+  def random_obliqueness
+    [-0.05, 0, 0, 0, 0, 0, 0, 0, 0, 0.05].shuffle.first
+  end
+
   def random_shadow
     s = NSShadow.alloc.init
     s.shadowColor = [UIColor.blackColor, UIColor.redColor].shuffle.first
@@ -72,6 +76,7 @@ class AppDelegate
       stroke_width: random_stroke_width,
       # text_effect: random_text_effect,  WARNING: Spikes the CPU!
       shadow: random_shadow,
+      obliqueness: random_obliqueness,
     }
 
     mastr = MotionMastr::Builder.new defaults
