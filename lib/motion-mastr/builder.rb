@@ -21,6 +21,7 @@ module MotionMastr
       shadow_attribute:              NSShadowAttributeName,
       text_effect_attribute:         NSTextEffectAttributeName,
       attachment_attribute:          NSAttachmentAttributeName,
+      link_attribute:                NSLinkAttributeName,
     }
 
     def initialize(default_styles={})
