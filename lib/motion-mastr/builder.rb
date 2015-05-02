@@ -20,6 +20,7 @@ module MotionMastr
       stroke_width_attribute:        NSStrokeWidthAttributeName,
       shadow_attribute:              NSShadowAttributeName,
       text_effect_attribute:         NSTextEffectAttributeName,
+      attachment_attribute:          NSAttachmentAttributeName,
     }
 
     def initialize(default_styles={})
