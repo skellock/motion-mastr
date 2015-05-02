@@ -19,6 +19,7 @@ module MotionMastr
       underline_style_attribute:     NSUnderlineStyleAttributeName,
       stroke_width_attribute:        NSStrokeWidthAttributeName,
       shadow_attribute:              NSShadowAttributeName,
+      text_effect_attribute:         NSTextEffectAttributeName,
     }
 
     def initialize(default_styles={})

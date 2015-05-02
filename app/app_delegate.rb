@@ -34,9 +34,13 @@ class AppDelegate
     [-4, -1, :default, 0, 0, 0, 1, 4].shuffle.first
   end
 
+  def random_text_effect
+    [:letterpress, nil, nil, nil].shuffle.first
+  end
+
   def random_shadow
     s = NSShadow.alloc.init
-    s.shadowColor = random_background_color
+    s.shadowColor = [UIColor.blackColor, UIColor.redColor].shuffle.first
     s.shadowOffset = [[0, 0], [4,4], [8,8], [12,12]].shuffle.first
     s.shadowBlurRadius = [0.0, 1.0, 2.0, 4.0, 8.0].shuffle.first
     s
@@ -62,6 +66,7 @@ class AppDelegate
       alignment: random_alignment,
       line_spacing: random_line_spacing,
       stroke_width: random_stroke_width,
+      # text_effect: random_text_effect,  WARNING: Spikes the CPU!
       shadow: random_shadow,
     }
 
@@ -73,7 +78,7 @@ class AppDelegate
         background_color: random_background_color,
         stroke_color: random_background_color,
         underline_color: random_background_color,
-        strikethrough_color: random_background_color
+        strikethrough_color: random_background_color,
     end
     mastr
   end
@@ -96,7 +101,7 @@ class AppDelegate
     @window.rootViewController = navigationController
     @window.makeKeyAndVisible
 
-    @timer = NSTimer.scheduledTimerWithTimeInterval(1, target:self, selector:'party', userInfo:nil, repeats:true)
+    @timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target:self, selector:'party', userInfo:nil, repeats:true)
 
 
     true
