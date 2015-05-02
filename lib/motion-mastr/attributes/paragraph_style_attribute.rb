@@ -63,6 +63,9 @@ module MotionMastr
     #   0, :default
     #   or a positive Float
     #
+    # :hyphenation_factor
+    #   0, :deffault
+    #   or a positive Float up to 1.0
     #
     def paragraph_style_attribute(styles={})
       return nil if styles.nil?
