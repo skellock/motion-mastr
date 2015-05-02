@@ -2,6 +2,7 @@ describe "Font Attribute" do
 
   before do
     @builder = MotionMastr::Builder.new
+    @font = UIFont.systemFontOfSize(30)
   end
 
   it "should return nil if given nil" do
@@ -17,8 +18,13 @@ describe "Font Attribute" do
   end
 
   it "should return the UIFont passed" do
-    sample = UIFont.new
-    @builder.font_attribute(font: sample).should == sample
+    @builder.font_attribute(font: @font).should == @font
+  end
+
+  it "should get applied through the builder" do
+    as = @builder.add("a").add("b", font: @font).build
+    as.attributesAtIndex(1, effectiveRange:nil).keys[0].should == NSFontAttributeName
+    as.attributesAtIndex(1, effectiveRange:nil).values[0].should == @font
   end
 
 end
