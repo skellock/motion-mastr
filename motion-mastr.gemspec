@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.version       = MotionMastr::VERSION
   spec.authors       = ["Steve Kellock"]
   spec.email         = ["steve@kellock.ca"]
-  spec.description   = "Get your NSMutableAttributedString on!"
+  spec.description   = "Get your NSMutableAttributedString on with RubyMotion!"
   spec.summary       = "A RubyMotion library for iOS 7+ to own NSMutableAttributedString."
   spec.homepage      = "https://github.com/skellock/motion-mastr"
   spec.license       = "MIT"
