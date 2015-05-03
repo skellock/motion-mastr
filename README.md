@@ -32,33 +32,38 @@ bundle
 include MotionMastr
 ```
 
-Making an NSMutableAttributedString
+This is a MastrBuilder.
 ```ruby
-mastr("Hi").build
+mastr # => MastrBuilder
 ```
 
-Adding a style.
+You'll use this to build your `NSMutableAttributeString`s.
 ```ruby
-mastr("Grimmace", foreground_color: UIColor.purpleColor).build
+mastr.build # => NSMutableAttributeString
 ```
 
-Make a builder object.
+Feed it a string.
 ```ruby
-MastrBuilder.new "Hi"
+mastr("hello").build
 ```
 
-Chaining pieces together.
+Feed it styles too.
+```ruby
+mastr("Grimace", foreground_color: UIColor.purpleColor).build
+```
+
+Keep adding pieces until you get what you want.
 ```ruby
 mastr.add("hi").add("there").add("!").build
 ```
 
-Default styles.
+Styles inside mastr() are default styles.
 ```ruby
 blue = UIColor.blueColor
 mastr("blue", foreground_color: blue).add(" blue ").add(" blue ").build
 ```
 
-Overriding defaults.
+Override defaults while adding pieces.
 ```ruby
 red = UIColor.redColor
 green = UIColor.greenColor
