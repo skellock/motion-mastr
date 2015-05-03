@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    motion-mastr (0.2.0)
+    motion-mastr (0.3.0)
 
 GEM
   remote: https://rubygems.org/
@@ -13,4 +13,4 @@ PLATFORMS
 
 DEPENDENCIES
   motion-mastr!
-  rake
+  rake (~> 10.0)
