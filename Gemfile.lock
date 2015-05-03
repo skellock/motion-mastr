@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    motion-mastr (0.1.0)
+    motion-mastr (0.2.0)
 
 GEM
   remote: https://rubygems.org/
