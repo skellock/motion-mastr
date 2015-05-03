@@ -4,6 +4,9 @@ A RubyMotion library for iOS to own NSMutableAttributedString.
 
 MASTR = Mutable Attributed STRing
 
+<img src="./_pics/mastr.gif" alt="Demo" />
+
+
 # Installation
 
 Add this to your Gemfile:
