@@ -1,4 +1,5 @@
 # motion-mastr
+[![Gem Version](https://img.shields.io/gem/v/motion-mastr.svg?style=flat)](https://rubygems.org/gems/motion-mastr)
 [![Build Status](https://img.shields.io/travis/skellock/motion-mastr.svg?style=flat)](https://travis-ci.org/skellock/motion-mastr)
 
 A RubyMotion library for iOS 7+ to own NSMutableAttributedString.
