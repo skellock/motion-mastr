@@ -14,6 +14,10 @@ describe "mastr" do
     mastr("hi", obliqueness: 1).default_styles.keys.count.should == 1
   end
 
+  it "should allow setting styles and nil text" do
+    mastr(obliqueness: 1).default_styles.keys.count.should == 1
+  end
+
 end
 
 describe "mastr!" do
