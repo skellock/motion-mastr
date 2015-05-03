@@ -119,8 +119,6 @@ class AppDelegate
     @window.makeKeyAndVisible
 
     @timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target:self, selector:'party', userInfo:nil, repeats:true)
-
-
     true
   end
 
