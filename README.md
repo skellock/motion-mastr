@@ -30,7 +30,7 @@ String -> NSMutableAttributedString
 "Hi".mastr!
 ```
 
-Adding a style
+Adding a style.
 ```ruby
 "Grimmace".mastr! foreground_color: UIColor.purpleColor
 ```
@@ -45,27 +45,32 @@ Make a builder object.
 MotionMastr::Builder.new "Hi"
 ```
 
-Adding pieces.
+Chaining pieces together.
 ```ruby
 MotionMastr::Builder.new.add("hi").add("there").add("!")
 ```
 
-Building and chaining.
+Chaining off a string.
 ```ruby
 "one".mastr.add("plus").add("one").build
 ```
 
-Default styles get applied to all pieces.
+Default styles.
 ```ruby
 blue = UIColor.blueColor
 "blue".mastr(foreground_color: blue).add(" blue ").add(" blue ").build
 ```
 
-Chaining with overrides.
+Overriding defaults.
 ```ruby
 red = UIColor.redColor
 green = UIColor.greenColor
-"red light".mastr(foreground_color:red).add("green light", foreground_color:green).add("red light").add("red light").build
+"red light"
+  .mastr(foreground_color:red)
+  .add("green light", foreground_color:green)
+  .add("red light")
+  .add("red light")
+  .build
 ```
 
 
