@@ -21,6 +21,10 @@ describe "Foreground Color" do
     @builder.foreground_color_attribute(foreground_color: @sample).should == @sample
   end
 
+  it "should also support being called :color" do
+    @builder.foreground_color_attribute(color: @sample).should == @sample
+  end
+
   it "should get applied throught the builder" do
     as = @builder.add("a").add("b", foreground_color: @sample).build
     as.attributesAtIndex(1, effectiveRange:nil).keys[0].should == NSForegroundColorAttributeName

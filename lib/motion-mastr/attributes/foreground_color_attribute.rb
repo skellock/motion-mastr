@@ -8,6 +8,7 @@ module MotionMastr
     def foreground_color_attribute(styles={})
       return nil if styles.nil?
       value = styles[:foreground_color]
+      value ||= styles[:color]
       return nil unless value && value.is_a?(UIColor)
       value
     end
