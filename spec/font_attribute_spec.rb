@@ -1,7 +1,7 @@
 describe "Font Attribute" do
 
   before do
-    @builder = MotionMastr::Builder.new
+    @builder = MotionMastr::MastrBuilder.new
     @font = UIFont.systemFontOfSize(30)
   end
 

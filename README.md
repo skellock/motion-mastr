@@ -1,6 +1,6 @@
 # motion-mastr
 
-A RubyMotion library for iOS to own NSMutableAttributedString.
+A RubyMotion library for iOS 7+ to own NSMutableAttributedString.
 
 MASTR = Mutable Attributed STRing
 
@@ -28,48 +28,41 @@ bundle
 
 # Usage
 
-String -> NSMutableAttributedString
 ```ruby
-"Hi".mastr!
+include MotionMastr
+```
+
+Making an NSMutableAttributedString
+```ruby
+mastr("Hi").build
 ```
 
 Adding a style.
 ```ruby
-"Grimmace".mastr! foreground_color: UIColor.purpleColor
-```
-
-Many styles, handle it!
-```ruby
-"Ninja".mastr! foreground_color: UIColor.blackColor, background_color: UIColor.blackColor
+mastr("Grimmace", foreground_color: UIColor.purpleColor).build
 ```
 
 Make a builder object.
 ```ruby
-MotionMastr::Builder.new "Hi"
+MastrBuilder.new "Hi"
 ```
 
 Chaining pieces together.
 ```ruby
-MotionMastr::Builder.new.add("hi").add("there").add("!")
-```
-
-Chaining off a string.
-```ruby
-"one".mastr.add("plus").add("one").build
+mastr.add("hi").add("there").add("!").build
 ```
 
 Default styles.
 ```ruby
 blue = UIColor.blueColor
-"blue".mastr(foreground_color: blue).add(" blue ").add(" blue ").build
+mastr("blue", foreground_color: blue).add(" blue ").add(" blue ").build
 ```
 
 Overriding defaults.
 ```ruby
 red = UIColor.redColor
 green = UIColor.greenColor
-"red light"
-  .mastr(foreground_color:red)
+mastr("red light", foreground_color:red)
   .add("green light", foreground_color:green)
   .add("red light")
   .add("red light")

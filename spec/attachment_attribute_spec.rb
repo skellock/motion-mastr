@@ -1,7 +1,7 @@
 describe "Attachment Attribute" do
 
   before do
-    @builder = MotionMastr::Builder.new
+    @builder = MotionMastr::MastrBuilder.new
     @attachment = NSTextAttachment.alloc.init
   end
 

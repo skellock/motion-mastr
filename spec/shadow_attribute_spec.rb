@@ -1,7 +1,7 @@
 describe "Shadow Attribute" do
 
   before do
-    @builder = MotionMastr::Builder.new
+    @builder = MotionMastr::MastrBuilder.new
   end
 
   it "should return nil if given no styles" do

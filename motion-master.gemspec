@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Steve Kellock"]
   spec.email         = ["steve@kellock.ca"]
   spec.description   = "Get your NSMutableAttributedString on!"
-  spec.summary       = "Inferior to CoreText and HTML, it's Attributed Strings!  You'll always be 3rd place in Apple's heart.  Now you can share the bronze medal with NSMutableAttributedString in RubyMotion!"
+  spec.summary       = "A RubyMotion library for iOS 7+ to own NSMutableAttributedString."
   spec.homepage      = "https://github.com/skellock/motion-mastr"
   spec.license       = "MIT"
 

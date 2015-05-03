@@ -1,7 +1,7 @@
 describe "Strikethrough Style" do
 
   before do
-    @builder = MotionMastr::Builder.new
+    @builder = MotionMastr::MastrBuilder.new
     @sample = :single
   end
 

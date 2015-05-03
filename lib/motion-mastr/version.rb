@@ -1,3 +1,3 @@
 module MotionMastr
-  VERSION = "0.1.0" unless defined?(MotionMastr::VERSION)
+  VERSION = "0.2.0" unless defined?(MotionMastr::VERSION)
 end

@@ -1,5 +1,7 @@
 class AppDelegate
 
+  include MotionMastr
+
   attr_reader :label
 
   def random_background_color
@@ -83,7 +85,7 @@ class AppDelegate
       obliqueness: random_obliqueness,
     }
 
-    mastr = MotionMastr::Builder.new defaults
+    mastr = MastrBuilder.new defaults
     random_message.each_char do |c|
       mastr.add c,
         font: random_font,

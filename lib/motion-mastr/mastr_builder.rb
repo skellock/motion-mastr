@@ -1,5 +1,5 @@
 module MotionMastr
-  class Builder
+  class MastrBuilder
 
     include Attributes
 

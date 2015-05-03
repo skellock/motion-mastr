@@ -1,7 +1,7 @@
-describe "Builder" do
+describe "MastrBuilder" do
 
   before do
-    @builder = MotionMastr::Builder.new
+    @builder = MotionMastr::MastrBuilder.new
   end
 
   it "should build an NSMutableAttributedString" do
@@ -37,7 +37,7 @@ describe "Builder" do
   end
 
   it "should remember default styles" do
-    MotionMastr::Builder.new(hi: "there").default_styles[:hi].should == "there"
+    MotionMastr::MastrBuilder.new(hi: "there").default_styles[:hi].should == "there"
   end
 
   it "should allow configuring of default styles via an indexer" do
@@ -46,7 +46,7 @@ describe "Builder" do
   end
 
   it "should read from default styles via an indexer" do
-    MotionMastr::Builder.new(hi: "there")[:hi].should == "there"
+    MotionMastr::MastrBuilder.new(hi: "there")[:hi].should == "there"
   end
 
   describe "With Default Styling" do

@@ -1,7 +1,7 @@
 describe "Underline Color" do
 
   before do
-    @builder = MotionMastr::Builder.new
+    @builder = MotionMastr::MastrBuilder.new
     @sample = UIColor.redColor
   end
 
